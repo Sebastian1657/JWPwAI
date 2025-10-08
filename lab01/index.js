@@ -2,6 +2,7 @@ const http = require('http');
 const path = require("path");
 const util = require("util");
 const v8 = require("v8");
+const repeat = require('repeat-string');
 
 const hostname = '127.0.0.1';
 const port = 8888;
@@ -9,7 +10,8 @@ const port = 8888;
 const server = http.createServer(function(request, response) {
     response.statusCode = 200;
     response.setHeader('Content-Type', 'text/plain');
-    response.end('Witaj, z serwera node.js !\n');
+    response.end(repeat('modul \'repeat\' sluzy do wielokrotnego powtarzania ciagow znakow.\n', 10));
+    console.log('Opis modułu repeat: Repeat the given string the specified number of times.');
 });
 
 server.listen(port, hostname, () => {
