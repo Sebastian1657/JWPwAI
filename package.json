@@ -20,5 +20,6 @@
   "dependencies": {
     "repeat-string": "^1.6.1",
     "replace-string": "^4.0.0"
-  }
+  },
+  "devDependencies": {}
 }
